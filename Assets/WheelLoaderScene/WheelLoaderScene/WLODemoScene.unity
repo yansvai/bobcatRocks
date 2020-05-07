@@ -3723,7 +3723,7 @@ MonoBehaviour:
   m_material: {fileID: 11400000, guid: 21f6c0eccde36e34ea0d2962e1f80201, type: 2}
   m_legacySourceObject: {fileID: 0}
   m_sourceObjects:
-  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 3}
+  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &157340649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3739,7 +3739,7 @@ MonoBehaviour:
   m_massPropertiesAsAsset: {fileID: 0}
   m_motionControl: 1
   m_handleAsParticle: 0
-  m_linearVelocity: {x: 0, y: 0, z: 0}
+  m_linearVelocity: {x: -0, y: 0, z: 0}
   m_angularVelocity: {x: 0, y: 0, z: 0}
   m_linearVelocityDamping: {x: 0, y: 0, z: 0}
   m_angularVelocityDamping: {x: 0, y: 0, z: 0}
@@ -3757,11 +3757,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_mass:
     m_defaultToggle: 1
-    m_defaultValue: 35867.074
+    m_defaultValue: 48970.254
     m_userValue: 1
   m_inertiaDiagonal:
     m_defaultToggle: 1
-    m_defaultValue: {x: 2034698.4, y: 2021710.2, z: 15384.916}
+    m_defaultValue: {x: 3930781, y: 3906912, z: 27141.535}
     m_userValue: {x: 1, y: 1, z: 1}
   m_massCoefficients: {x: 0, y: 0, z: 0}
   m_inertiaCoefficients: {x: 0, y: 0, z: 0}
@@ -5136,7 +5136,7 @@ MonoBehaviour:
   m_material: {fileID: 11400000, guid: 21f6c0eccde36e34ea0d2962e1f80201, type: 2}
   m_legacySourceObject: {fileID: 0}
   m_sourceObjects:
-  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 3}
+  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &569151267
 GameObject:
   m_ObjectHideFlags: 0
@@ -6463,7 +6463,7 @@ MonoBehaviour:
   m_material: {fileID: 11400000, guid: 21f6c0eccde36e34ea0d2962e1f80201, type: 2}
   m_legacySourceObject: {fileID: 0}
   m_sourceObjects:
-  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 3}
+  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1018355669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7702,7 +7702,7 @@ MonoBehaviour:
   m_material: {fileID: 11400000, guid: 21f6c0eccde36e34ea0d2962e1f80201, type: 2}
   m_legacySourceObject: {fileID: 0}
   m_sourceObjects:
-  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 3}
+  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1518004041
 MonoBehaviour:
   m_ObjectHideFlags: 0
