@@ -10,6 +10,8 @@ namespace RosSharp.RosBridgeClient
         private Messages.Standard.Int32 message;
         // private Transform Parent;
         public LayerMask LayerMask;
+        public Transform origin;
+        public Transform destination;
 
         protected override void Start()
         {
@@ -20,7 +22,7 @@ namespace RosSharp.RosBridgeClient
 
         void FixedUpdate()
         {
-                        UpdateMessage();
+            UpdateMessage();
         }
 
 
@@ -34,15 +36,16 @@ namespace RosSharp.RosBridgeClient
         private void UpdateMessage()
         {
 
-         //   down 43-->  145
-         //   UP   59 --> 275
+            //   down 43-->  145
+            //   UP   59 --> 275
 
             // ReayCast(); //Dont Need raycast any more
 
             //we gonna use the Y Rotation to measure the hight
-            float hight=transform.localEulerAngles.y;
-           // Debug.Log("HIGHT :" + hight);
-            message.data = CalcRange(hight);
+            float hight = transform.localEulerAngles.y;
+            // Debug.Log("HIGHT :" + hight);
+            message.data = CalcRange(ReayCast());
+
             Publish(message);
         }
 
@@ -50,26 +53,32 @@ namespace RosSharp.RosBridgeClient
         {
 
             val = 8.1258f * val - 204.375f;
-            Debug.Log("Hight:" + (int)val);
+            Debug.Log("Hight:" + val);
             return (int)val;
-            
+
 
         }
 
 
-        private void ReayCast()
+        private float ReayCast()
         {
-            RaycastHit hit;
+            //RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask))
-            {
-                Debug.DrawLine(transform.position, hit.point, Color.blue);
-                // Debug.Log("distance" + hit.distance);
-                var flDistance = hit.distance * 100;
-                ValueToPublish = (int)flDistance;
-                message.data = ValueToPublish;
-                Publish(message);
-            }
+            //if (Physics.Raycast(origin.position, destination.position, out hit, Mathf.Infinity))
+            //{
+            Debug.DrawLine(origin.position, destination.position, Color.blue);
+            //    Debug.Log("distance" + hit.distance);
+            //    var flDistance = hit.distance * 100;
+            //    ValueToPublish = (int)flDistance;
+
+
+            //}
+
+
+            //return ValueToPublish;
+
+            float ValueToPublish = Vector3.Distance(origin.position, destination.position);
+            return ValueToPublish;
         }
     }
 }

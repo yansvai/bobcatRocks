@@ -524,6 +524,7 @@ namespace AGXUnity.Model
         public bool ManualInput = false;
 
 
+
         public void ToggeleManualInput(bool state)
         {
 
