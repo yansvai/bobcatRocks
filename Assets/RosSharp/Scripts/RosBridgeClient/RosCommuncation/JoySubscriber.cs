@@ -12,6 +12,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
+using UnityEngine;
 
 namespace RosSharp.RosBridgeClient
 {
@@ -20,13 +21,14 @@ namespace RosSharp.RosBridgeClient
         public JoyButtonWriter[] joyButtonWriters;
         public JoyAxisWriter[] joyAxisWriters;
 
-		protected override void Start()
-		{
-			base.Start();
-		}
-		
+        protected override void Start()
+        {
+            base.Start();
+        }
+
         protected override void ReceiveMessage(Messages.Sensor.Joy joy)
         {
+            Debug.Log("Received JOY values=" + joy.axes[0].ToString() + ","+joy.axes[2].ToString() + "," + joy.axes[3].ToString() + "," + joy.axes[4].ToString() + "," + joy.axes[5].ToString());
             int I = joyButtonWriters.Length < joy.buttons.Length ? joyButtonWriters.Length : joy.buttons.Length;
             for (int i = 0; i < I; i++)
                 if (joyButtonWriters[i] != null)
